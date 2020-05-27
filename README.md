@@ -22,3 +22,36 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+## usersテーブル
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false, add_index unique: true|
+|email|string|null: false, add_index unique: true|
+
+### Association
+- has_many :mobiles, through: mobiles_users
+- has_many :mobiles_users
+
+
+## mobilesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|image|string|
+|name|string|null: false|
+|body|text|
+
+### Association
+- has_many :users, through: mobiles_users
+- has_many :mobiles_users
+
+
+## mobiles_usersテーブル
+|Column|Type|Options|
+|------|----|-------|
+|user_id|integer|null: false, foreign_key: true|
+|mobile_id|integer|null: false, foreign_key: true|
+
+### Association
+- belongs_to :mobile
+- belongs_to :user
