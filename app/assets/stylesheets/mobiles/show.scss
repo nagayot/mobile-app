@@ -52,6 +52,12 @@
           height            : 100px;
           width             : 100px;
           margin            : 0 auto;
+          .android-icon {
+            overflow        : hidden;
+            width           : 100px;
+            height          : 100px;
+            margin          : 0 auto;
+          }
         }
         &__name {
           font-size         : 15px;
