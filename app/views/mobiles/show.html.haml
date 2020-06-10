@@ -19,9 +19,13 @@
     .body__contents__left
       .body__contents__left__profile
         .body__contents__left__profile__icon
+          = image_tag("android-icon.png", class: "android-icon")
         .body__contents__left__profile__name
-          name
+          = current_user.name
           %hr
       %ul.body__contents__left__like
         %li
           = link_to "気になる","#"
+          %hr
+        %li
+          = link_to "ログアウト",logout_path
