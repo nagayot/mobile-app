@@ -5,4 +5,8 @@ class MobilesController < ApplicationController
   def show
   
   end
+
+  def logout_page
+
+  end
 end

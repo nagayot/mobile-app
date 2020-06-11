@@ -3,19 +3,9 @@
   .body__contents
   
     .body__contents__main
-      %ul.body__contents__main__inside
-        %li
-          = link_to "docomo", docomo_index_path
-          %hr
-        %li
-          = link_to "SoftBank", softbank_index_path
-          %hr
-        %li
-          = link_to "au", au_index_path
-          %hr
-        %li
-          = link_to "楽天モバイル", rmobile_index_path
-
+      .body__contents__main__inside
+        = link_to "ログアウト", destroy_user_session_path, method: :delete
+      
     .body__contents__left
       .body__contents__left__profile
         .body__contents__left__profile__icon
