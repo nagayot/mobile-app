@@ -1,5 +1,40 @@
 # README
 
+# 機種変更のすヽめ
+
+* 機種変更する際に、どんな機種があるのか/どの機種にするか目星をつけるアプリです。
+
+# 紹介画像
+
+  <img width="1440" alt="機種変更のすヽめ" src="https://user-images.githubusercontent.com/64081393/84590971-c18ef680-ae75-11ea-8c5d-015fa5013902.png">
+
+
+# 主な機能
+
+* ユーザー新規登録/ログイン機能
+
+* お気に入り保存機能
+  こちらはまだ作成中ですが、気になる端末を保存し、何人がその端末を「気になる」しているか分かるようにしていきます。
+
+# 使ったもの(gem等)
+
+* devise
+* font-awesome
+
+
+# 使い方
+
+* デプロイはしていないので、
+  $ git clone https://github.com/nagayot/mobile-app.git
+  が必要になリます。
+
+
+# 製作者
+ 
+* 永吉　達朗
+
+
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
