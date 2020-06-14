@@ -13,7 +13,8 @@
 
 * ユーザー新規登録/ログイン機能
 
-* お気に入り保存機能(こちらはまだ作成中ですが、気になる端末を保存し、何人がその端末を「気になる」しているか分かるようにしていきます。)
+* お気に入り保存機能
+  * こちらはまだ作成中ですが、気になる端末を保存し、何人がその端末を「気になる」しているか分かるようにしていきます。
 
 # 使ったもの(gem等)
 
@@ -23,20 +24,14 @@
 
 # 使い方
 
-* デプロイはしていないので、
-  $ git clone https://github.com/nagayot/mobile-app.git
-  が必要になリます。
+* デプロイはしていないので、 $ git clone https://github.com/nagayot/mobile-app.git が必要になリます。
 
 
 # 製作者
- 
+
 * 永吉　達朗
 
 # 
-
-
-
-
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
