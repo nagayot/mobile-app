@@ -1,0 +1,69 @@
+= render partial: "layouts/header"
+.body
+  .body__contents
+    .body__contents__main
+      .body__contents__main__image
+        = image_tag("sampleimage.png", class: "android-image")
+      %hr
+      .body__contents__main__title
+        .device-name
+          Galaxy A20
+        .favorite
+          %i.fas.fa-star
+          気になる
+      %hr
+      .body__contents__main__text
+        .body__contents__main__text__index
+          〜 R A M / R O M 〜
+        .body__contents__main__text__explain
+          説明
+        .body__contents__main__text__index
+          〜 C P U 〜
+        .body__contents__main__text__explain
+          説明
+        .body__contents__main__text__index
+          〜 バ ッ テ リ ー 〜
+        .body__contents__main__text__explain
+          説明
+        .body__contents__main__text__index
+          〜 画 面 の 大 き さ 〜
+        .body__contents__main__text__explain
+          説明
+        .body__contents__main__text__index
+          〜 カ メ ラ 性 能 〜
+        .body__contents__main__text__explain
+          説明
+        .body__contents__main__text__index
+          〜 防 水 / 防 塵 〜
+        .body__contents__main__text__explain
+          説明
+        .body__contents__main__text__index
+          〜 お サ イ フ ケ ー タ イ 〜
+        .body__contents__main__text__explain
+          説明
+        .body__contents__main__text__index
+          〜 認 証 機 能 〜
+        .body__contents__main__text__explain
+          説明
+        .body__contents__main__text__index
+          〜 ひ と こ と 〜
+        .body__contents__main__text__explain
+          説明
+        .body__contents__main__text__index
+          〜 詳 細 U R L 〜
+        .body__contents__main__text__explain
+          %a{:href => "https://www.nttdocomo.co.jp/product/sc02m/?dynaviid=case0002.dynavi", :target => "_blank", class: "original"} Galaxy A20
+
+    .body__contents__left
+      .body__contents__left__profile
+        .body__contents__left__profile__icon
+          = image_tag("android-icon.png", class: "android-icon")
+        .body__contents__left__profile__name
+          = current_user.name
+          %hr
+      %ul.body__contents__left__like
+        %li
+          = link_to "気になる","#"
+          %hr
+        %li
+          = link_to "ログアウト",logout_path
