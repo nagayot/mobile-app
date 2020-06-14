@@ -28,7 +28,7 @@ Things you may want to cover:
 |------|----|-------|
 |name|string|null: false, add_index unique: true|
 |email|string|null: false, add_index unique: true|
-|passwprd|string|null: false|
+|password|string|null: false|
 
 ### Association
 - has_many :mobiles, through: mobiles_users
@@ -39,9 +39,8 @@ Things you may want to cover:
 ## mobilesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|image|string|
 |name|string|null: false|
-|body|text|
+|carrier_name|string|null: false|
 
 ### Association
 - has_many :users, through: mobiles_users
@@ -54,6 +53,7 @@ Things you may want to cover:
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
 |mobile_id|integer|null: false, foreign_key: true|
+
 
 ### Association
 - belongs_to :mobile
