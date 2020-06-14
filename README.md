@@ -38,7 +38,7 @@
 
 # ライセンス
 
-* [MIT license](https://en.wikipedia.org/wiki/MIT_License).
+* [MIT](https://en.wikipedia.org/wiki/MIT_License)
 
 # 
 
