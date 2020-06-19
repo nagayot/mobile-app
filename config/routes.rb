@@ -6,34 +6,47 @@ Rails.application.routes.draw do
   }
   
   get '/logout', to: 'mobiles#logout_page'
-  
-  get '/docomo/xperia10II', to: 'docomo#Xperia10II'
-  get '/docomo/GalaxyA41', to: 'docomo#GalaxyA41'
-  get '/docomo/LGstyle3', to: 'docomo#LGstyle3'
-  get '/docomo/AQUOSsense3', to: 'docomo#AQUOSsense3'
-  get '/docomo/GalaxyA20', to: 'docomo#GalaxyA20'
-  get '/docomo/arrowsBe4', to: 'docomo#arrowsBe4'
+  get 'favorites', to: 'favorites#index'
 
-  get '/docomo/Xperia5', to: 'docomo#Xperia5'
-  get '/docomo/GalaxyS10', to: 'docomo#GalaxyS10'
-  get '/docomo/GalaxyS10plus', to: 'docomo#GalaxyS10plus'
-  get '/docomo/HUAWEIP30Pro', to: 'docomo#HUAWEIP30Pro'
+  get '/docomo/all', to: 'mobiles#docomoall'
+  get '/docomo/xperia10II', to: 'mobiles#Xperia10II'
+  get '/docomo/GalaxyA41', to: 'mobiles#GalaxyA41'
+  get '/docomo/LGstyle3', to: 'mobiles#LGstyle3'
+  get '/docomo/AQUOSsense3', to: 'mobiles#AQUOSsense3'
+  get '/docomo/GalaxyA20', to: 'mobiles#GalaxyA20'
+  get '/docomo/arrowsBe4', to: 'mobiles#arrowsBe4'
 
-  get '/docomo/GalaxyS205G', to: 'docomo#GalaxyS205G'
-  get '/docomo/AQUOSR5G', to: 'docomo#AQUOSR5G'
-  get '/docomo/Xperia1II', to: 'docomo#Xperia1II'
-  get '/docomo/LGV60ThinQ5G', to: 'docomo#LGV60ThinQ5G'
-  get '/docomo/GalaxyS20plus5G', to: 'docomo#GalaxyS20plus5G'
-  get '/docomo/arrows5G', to: 'docomo#arrows5G'
+  get '/docomo/Xperia5', to: 'mobiles#Xperia5'
+  get '/docomo/GalaxyS10', to: 'mobiles#GalaxyS10'
+  get '/docomo/GalaxyS10plus', to: 'mobiles#GalaxyS10plus'
+  get '/docomo/HUAWEIP30Pro', to: 'mobiles#HUAWEIP30Pro'
+
+  get '/docomo/GalaxyS205G', to: 'mobiles#GalaxyS205G'
+  get '/docomo/AQUOSR5G', to: 'mobiles#AQUOSR5G'
+  get '/docomo/Xperia1II', to: 'mobiles#Xperia1II'
+  get '/docomo/LGV60ThinQ5G', to: 'mobiles#LGV60ThinQ5G'
+  get '/docomo/GalaxyS20plus5G', to: 'mobiles#GalaxyS20plus5G'
+  get '/docomo/arrows5G', to: 'mobiles#arrows5G'
 
 
+  resources :mobiles,     only: [:show, :index] do
+    collection do
+      post :create_favorite
+      post :destroy_favorite
+    end
+  end
 
+  resources :softbanks,   only: [:index]
 
-  resources :mobile,   only: [:show]
-  resources :docomo,   only: [:index]
-  resources :softbank, only: [:index]
-  resources :au,       only: [:index]
-  resources :rmobile,  only: [:index]
+  resources :aus,         only: [:index]
+
+  resources :rmobiles,    only: [:index]
+
+  resources :users,       only: [:show] do
+    collection do
+      get :user_favorites
+    end
+  end
 
   root 'mobiles#show'
 end
